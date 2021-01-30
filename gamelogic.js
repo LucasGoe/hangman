@@ -103,6 +103,68 @@ function isGameLost(word, guesses) {
             console.log(count);
         }
     }
+    if (count === 1) {
+        console.log("|\n" +
+            "|\n" +
+            "|\n" +
+            "|\n" +
+            "|\n" +
+            "===========")
+    }
+    if (count === 2) {
+        console.log("__________\n" +
+            "| /\n" +
+            "|/\n" +
+            "|\n" +
+            "|\n" +
+            "|\n" +
+            "===========")
+    }
+    if (count === 3) {
+        console.log("__________\n" +
+            "| /     |\n" +
+            "|/\n" +
+            "|\n" +
+            "|\n" +
+            "|\n" +
+            "===========")
+    }
+    if (count === 4) {
+        console.log("__________\n" +
+            "| /     |\n" +
+            "|/      o\n" +
+            "|\n" +
+            "|\n" +
+            "|\n" +
+            "===========")
+    }
+    if (count === 5) {
+        console.log("__________\n" +
+            "| /     |\n" +
+            "|/      o\n" +
+            "|       O\n" +
+            "|\n" +
+            "|\n" +
+            "===========")
+    }
+    if (count === 6) {
+        console.log("__________\n" +
+            "| /     |\n" +
+            "|/     _o_\n" +
+            "|       O\n" +
+            "|\n" +
+            "|\n" +
+            "===========")
+    }
+    if (count === 7) {
+        console.log("__________\n" +
+            "| /     |\n" +
+            "|/     _o_\n" +
+            "|       O\n" +
+            "|      / \\\n" +
+            "|\n" +
+            "===========")
+    }
     //console.log('wat is dit?', isLetterGuessed)
     // - [ ] aan het eind van de functie if statement
     // - [ ] if
