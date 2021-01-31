@@ -43,20 +43,20 @@ function isGameWon(word, guesses) {
     // Kunnen we 1 letter vinden die je niet hebt geraden? return false
     // Kunnen niet 1 letter vinden die je niet hebt geraden return true
     // - [x] loggen: wat is word & guesses
-    console.log("WOORD TE RADEN:", word);
-    console.log("GUESSES:", guesses);
+    //console.log("WOORD TE RADEN:", word);
+    //console.log("GUESSES:", guesses);
 
     // - [x] word -> word.split(""): ["j", "a", "v","a", "s", "c", "r", "i", "p", "t"]
     const lettersInWordArray = word.split("");
-    console.log("ARRAY OF LETTERS", lettersInWordArray);
+    //console.log("ARRAY OF LETTERS", lettersInWordArray);
 
     // - [x] loopen over dat array met de letters van het woord
     let output = "";
     for (let index = 0; index < lettersInWordArray.length; index++) {
         const letterInWord = lettersInWordArray[index];
-        console.log("1 LETTER OF WORD TO GUESS:", letterInWord);
+        //console.log("1 LETTER OF WORD TO GUESS:", letterInWord);
         const isLetterGuessed = guesses.includes(letterInWord);
-        console.log(letterInWord, "GERADEN?", isLetterGuessed);
+        //console.log(letterInWord, "GERADEN?", isLetterGuessed);
         // - [x] if guesses true -> we gaan door
         // geen code nodig, ga door naar;
         // - [x] if guesses false -> we stoppen: return false
@@ -84,7 +84,7 @@ function isGameLost(word, guesses) {
         const guess = guesses[index];
         // - [x ] zit deze guess (letter) in het woord word.includes(guess)
         const isLetterGuessed = word.includes(guess);
-        console.log(guesses, "GERADEN letter?", guess);
+        //console.log(guesses, "GERADEN letter?", guess);
         // - [x] if
         // - [x] Als true (we doen niets)
         // - [x] Als false "+ doen" -> counter met 1 verhogen
