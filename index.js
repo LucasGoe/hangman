@@ -9,7 +9,7 @@ function game(word, guesses) {
   // voeg de geraden letter toe aan de array met guesses
   guesses.push(letter);
 
-  const playerWon = isGameWon(word,guesses);
+  const playerWon = isGameWon(word, guesses);
   if (playerWon) {
     console.log("Je hebt gewonnen!");
     return;
@@ -21,9 +21,10 @@ function game(word, guesses) {
   }
   // volgende ronde! we roepen game nog een keer aan
   game(word, guesses);
+  game("javascript", []);
 }
 
-console.log(`
+  console.log(`
 __________  
 | /     |    ░██████╗░░█████╗░██╗░░░░░░██████╗░░░░░░██╗███████╗
 |/     _o_   ██╔════╝░██╔══██╗██║░░░░░██╔════╝░░░░░░██║██╔════╝
@@ -33,4 +34,5 @@ __________
 ===========  ░╚═════╝░╚═╝░░╚═╝╚══════╝░╚═════╝░░╚════╝░╚══════╝
 `);
 
-game("javascript", []);
+  game("javascript", []);
+
