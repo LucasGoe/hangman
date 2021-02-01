@@ -5,9 +5,27 @@ function game(word,guesses) {
   console.log("Dit heb je tot nu toe geraden: ", guesses);
   const wordSoFar = displayWordSoFar(word, guesses);   // toegevoegd om wordSoFar
   console.log(wordSoFar);                              // te laten zien
-  const letter = question("Raad een letter: ", {limit: [/[a-z]/]}).substr(0, 1).toLowerCase();
+  const letter = question("Raad een letter: ").substr(0, 1).toLowerCase();
   // voeg de geraden letter toe aan de array met guesses
-  guesses.push(letter);
+  // guesses.push(letter);  // zie hieronder if(!characterExists)
+  if (letter.match(/^[A-Za-z]$/)) {
+    let characterExists;
+    for (let i = 0; i < guesses.length; i++) {
+      if (guesses.includes(letter)) {
+        characterExists = true;
+      }
+    }
+    if (!characterExists) {
+      guesses.push(letter);
+    } else {
+      console.log("Dit teken heb je al gebruikt, probeer een andere letter \n")
+    }
+  }
+  else {
+    console.log("Alleen alfabetische letters zijn toegestaan, kies opnieuw \n");
+  }
+
+  const guessedWord = displayWordSoFar(word, guesses);
 
   const playerWon = isGameWon(word, guesses);
   if (playerWon) {
